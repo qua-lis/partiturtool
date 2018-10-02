@@ -58,17 +58,18 @@ Die Setup-Routine legt im Setup-Verzeichnis zusätzlich die Datei „create_part
 
 Falls die automatische Konfiguration aus Grund mangelnder Schreibrechte nicht durchgeführt werden kann, gehen Sie folgendermaßen vor:
 
-### 1. Konfigurationsdatei „lib/p_sys_konfig_instanz.inc.php“
+#### 1. Konfigurationsdatei „lib/p_sys_konfig_instanz.inc.php“
 
 Wenn die Konfigurationsdatei nicht erzeugt werden kann, weil der Webserver keine Schreibrechte auf das Verzeichnis "lib" hat, kann die Datei aus der Setup-Routine mit der entsprechenden Schaltfläche heruntergeladen werden. Diese muss dann manuell auf den Server in das Verzeichnis "lib" kopiert werden.
 Alternativ kann eine Datei mit dem Namen "p_sys_konfig_instanz.inc.php" angelegt und der Inhalt des angezeigten Textfeldes dort hinein kopiert werden.
 
-### 2. SQL-Skript „create_partitur_db.sql”
+#### 2. SQL-Skript „create_partitur_db.sql”
 
 Wenn das SQL-Skript nicht erzeugt werden kann, weil der Webserver keine Schreibrechte auf das Verzeichnis "setup" hat, kann das Skript aus der Setup-Routine mit der entsprechenden Schaltfläche heruntergeladen werden. Dieses muss anschließend in der Datenbank ausgeführt werden.
 Alternativ können die Befehle aus dem angezeigten Textfeld kopiert und in der Datenbank ausge-führt werden.
 
-Start der Anwendung
+## Start der Anwendung
+
 Rufen Sie die Anwendung mit dem Internet-Browser durch Wählen von
 
    http://<server>/<pfad_zur_anwendung/
