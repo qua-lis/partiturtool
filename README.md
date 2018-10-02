@@ -1,10 +1,10 @@
-﻿#Partiturtool
+﻿# Partiturtool
 
 Qualitäts- und Unterstützungsagentur - Landesinstitut für Schule (QUA-LiS NRW)
 
 Weiter Informationen zu dem Jahrgangspartituren finden Sie unter http://www.schulentwicklung.nrw.de/cms/jahrgangspartitur/
 
-##Installation der Jahrgangspartitur
+## Installation der Jahrgangspartitur
 
 Voraussetzung für die Installation der Jahrgangspartitur – Software ist ein Server mit den jeweils aktuellen Versionen von Apache, MySQL und PHP. Falls diese Software auf dem Schulserver noch nicht existiert, empfiehlt sich die Installation eines XAMPP – Systems.
 
