@@ -44,7 +44,7 @@ Rufen Sie die Setup-Routine mit
 
    http://<server>/<pfad_zur_anwendung>/setup/
 
-       oder
+oder
 
    http://<server>/<pfad_zur_anwendung>/setup/p_setup.php
 
