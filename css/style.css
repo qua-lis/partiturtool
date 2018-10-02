@@ -1,0 +1,310 @@
+/* ////// BP Stylesheet //////////////////////////// */
+/* ////// Version vom 26.02.2013 /////////////////// */
+/* ////// von Carsten Peters /////////////////////// */
+
+* { margin: 0; padding: 0; }
+body {  font: 62.5% Arial, Helvetica, sans-serif; padding: 10px; min-width: 780px; max-width: 1220px; }
+a img { border: none; }
+.clear { clear: both; }
+.none { display: none; }
+.wichtig { font-weight: bold; color: #c00; padding: 15px 0 0 0; }
+th.wichtig { padding: 5px; }
+.hinweis { background: #eee; padding: 15px; margin: 10px 0; }
+.glossar { color: #f00; }
+.bezug { background: #ee7; }
+.durchfuehrung { background: #69d; }
+.rueckmeldung { background: #ee7; }
+.aufgabe { border: 3px solid #ccc; padding: 0 18px; margin: 0 0 10px 0; }
+p .mehr { background: url(images/r1.gif) no-repeat 0 3px; padding: 0 0 0 18px; }
+.zurueck { background: url(images/l1.gif) no-repeat 0 50%; padding: 0 0 0 18px; }
+.unsichtbar, #formsearch { display: none; }
+acronym, abbr { cursor: help; }
+
+/* Skiplinks */
+
+#skip1 a,
+#skip2 a { color: #fff; position: absolute; z-index: 2; width: 15em; overflow: hidden; top: -100px; left: -1000px; } 
+#skip1 a:focus,
+#skip2 a:focus { color: #666; font-weight: bold; margin: -30px 0 0 0; top: 0; left: 0; }
+
+#container { float: left; display: inline; margin-top: 2px; width: 100%; font-size: 1.32em }
+#wrapper { float: left; display: inline; width: 100%; }
+#footer { clear: both; width: 100%; text-align: center; border-top: 1px solid #000; padding: 10px 0; margin: 10px 0; }
+
+
+/*///// Listen ///////////////////////////////////////////////////////////////// */
+
+ul, ol, li { list-style: none; list-style-type: none; }
+
+
+/*///// Header ////////////////////////////////////////////////////////////////// */
+
+#logo { float: right; }
+
+#header { position: relative; margin: 58px 0 0 0; }
+	#header img { margin: 0 0 10px 0; }
+	#header #skipnavi,
+	#header #skipnavi a { font-size: 11px; }
+	#header #topnavi { height: 3.2em; padding: 4px 0 0 10px; margin: 0 0 1px 0; text-align: left; border-left-width: 7px; border-left-style: solid; background-image: url(images/hg_header.png); background-repeat: repeat-y; }
+		#header #topnavi h1 { font-size: 1.45em; padding: 0 0 0 10px; margin: 0;  margin: -2px 0 0 0; }
+
+        #header #topnavi h1#zp10_h1 { padding: 0 0 0 35px; }
+		#header #topnavi h1 .angebot { font-size: 0.9em; text-transform: none; }
+
+		#header #topnavi h1#standard_h1 .angebot { margin: 70px 0 0 60px; }
+		#header #topnavi h1#abitur_h1 .angebot,
+		#header #topnavi h1#bk_h1 .angebot,
+		#header #topnavi h1#gost_h1 .angebot,
+		#header #topnavi h1#wbk_h1 .angebot { margin: 70px 0 0 60px; }		
+		#header #topnavi h1#lernstand_h1 .angebot { margin: 70px 0 0 40px; }
+		#header #topnavi h1#zp10_h1 .angebot { margin: 70px 0 0 -30px; }
+		#header #topnavi h1#vera_h1 .angebot { margin: 70px 0 0 60px; }
+		#header #topnavi h1#schulleistung_h1 .angebot { margin: 70px 0 0 50px; }
+		#header #topnavi h1#kernlehrplaene_h1 .angebot { margin: 70px 0 0 50px; }
+		#header #topnavi a { text-decoration: none; }
+		
+	#suche { height: 21px; margin: 0 0 1px 0; padding: 4px 0 0 10px; border-left: 7px solid #900; font-size: 0.9em; }
+		
+	/*  Fat Erik 5s Simple Pipe List */
+	#suche li { display: inline; float: left; padding: 0 0.5em 0 0.8em; margin: 0 0.5em 0 -0.8em; background: url(images/rechtsweiss.gif) no-repeat 0 50%; }
+	#suche li:first-child { background: none }
+	#suche a { text-decoration: none; font-weight: bold; }
+	#suche a:hover{ text-decoration: underline; }
+	#suche p#login { float: right; display: inline; margin: 0 18px 0 0; font-weight: bold; color: #fff }
+
+	#topnavi ul { color: #000; float: right; display: inline; margin: -44px 20px 0 0; }
+	#topnavi li { display: inline; float: left; padding: 0 0.5em 0 0.3em; margin: 0 0.5em 0 -0.9em; no-repeat 0 50%; }
+	#topnavi a { text-decoration: none; }
+	#topnavi a:hover,
+	#topnavi a#current { text-decoration: underline; }
+	#topnavi li:before { content: "| "; }
+	#topnavi li:first-child:before { content: ""; }
+	
+	
+	/* Neupositionierung der Suche
+	---------------------------------------------------------------------------*/
+	
+	#header #search { float: right; margin: -2px 6px 0 0; }
+	#header #search label { color: #fff; font-weight: bold; }
+	#button { font-size: 11px; }
+	
+	#login { float: right; margin: -42px 147px 0 0; }
+	.ie9 #login,
+	.ie8 #login { margin: -42px 168px 0 0; }
+	.ie7 #login { position: relative; margin: -42px 13px 0 0; }
+	#topnavi ul { margin: -42px 0 0 0; }
+	#topnavi li:first-child:before { content: "| "; }
+	.sinus #topnavi li:first-child:before,
+	.abi-online #topnavi li:first-child:before { content: ""; }
+
+
+
+/*///// Banner //////////////////////////////////////////////////////////////// */
+
+.ll-banner { margin: 0 0 10px 0; height: 50px; border: 1px solid #ccc; background-color: #fff; background-repeat: no-repeat; background-position: -1px 50%; }
+#content .ll-banner h2 { font-size: 1.4em; line-height: 50px; padding: 0 0 0 120px; margin: 0 0 0 15px; color: #ccc; }
+#kein_banner { height: 0; }
+h2 .info { float: right; padding: 0 35px 0 0; font-size: 0.9em; }
+#content #FIDS h2 { font-size: 1.1em; }
+/*#content #PortfolioMK h2 { display: none; }*/
+#content #kompass h2 { font-size: 1em; line-height: 1.4em; margin: 5px 0 0 15px; color: #999 }
+
+#CertiLingua { background-image: url(/cms/upload/certilingua/images/logo.gif); }
+#EPS { background-image: url(/cms/upload/eps/images/logo.gif); }
+#FEU { background-image: url(/cms/upload/feu/images/logo.gif); }
+#FIDS { background-image: url(/cms/upload/fids/images/logo.png); }
+#Integrationsstellen { background-image: url(/cms/upload/integrationsstellen/images/logo.gif); }
+#Sprachenwerkstatt { background-image: url(/cms/upload/Sprachenwerkstatt/images/logo_sprachenwerkstatt.gif); }
+#Sprachpruefung { background-image: url(/cms/upload/sprachpruefung/images/logo.gif); }
+#UnterrichtsentwicklungD { background-image: url(/cms/upload/ue-deutsch/images/logoUED.gif); }
+#UnterrichtsentwicklungE { background-image: url(/cms/upload/ue-englisch/images/logoUEE.gif); }
+#UnterrichtsentwicklungM { background-image: url(/cms/upload/ue-mathematik/images/logoUEM.gif); }
+#Schulversuch_Islamkunde { background-image: url(/cms/upload/svislam/images/logo.gif); }
+#PortfolioMK { background-image: url(/cms/upload/portfoliomk/images/logo.gif);  background-position: 100% 50%; }
+#EGS { background-image: url(/cms/upload/egs/logo.jpg); }
+#kompass { background-image: url(/cms/upload/kompass/images/logo.jpg); }
+
+
+/*///// Content //////////////////////////////////////////////////////////////// */
+
+#content { margin: 0 0 0 210px; padding: 0 10px; line-height: 1.5em; }
+.popup #content { margin: 0; }
+#box #content,
+#box-offiziell #content,
+#box-offiziell_klapp #content,
+#klp-hinweise-box #content { margin: 0 193px 0 210px; }
+	#content h2 { font-size: 125%; margin: 0 0 10px 0; }
+	#content h3 { font-size: 110%; margin: 20px 0 10px 0; }
+	#content h4 { font-size: 110%; margin: 0 0 10px 0;}
+	#content h5 { font-size: 100%; margin: 0 0 5px 0; color: #5583BD; }
+	#content h6 { font-size: 100%; margin: 0 0 5px 0; font-weight: normal; font-style: italic; }
+	#start #content h3 {  }
+	#start #content h3 img { margin: 0 20px -18px 0; }	
+	#start #content h3 a { border: none; }	
+	#uebersicht #content h3 { color: #666; border-bottom: 2px solid #666; }	
+	#uebersicht #content h4 { font-size: 110%; color: #369; }			
+	#uebersicht #content h3.banner { height: 50px; line-height: 50px; margin: 20px 0 5px 0; border-bottom: none; }	
+	#uebersicht #content h3 img { margin: 0 20px -18px 0; }	
+	#uebersicht #content h3 a { border: none; }		
+	#uebersicht strong,
+	#uebersicht b { color: #666; }		
+	#content h3.underline,
+	#content h5.underline,
+	#content #articlelist h2 { margin-top: 2em; color: #069; border-bottom: 2px solid #069; width: 99%; margin-bottom: 1em; } 
+	#content #articlelist h2 { border-bottom: 1px solid #069; } 
+	#content h4 { font-size: 100%; margin: 20px 0 10px 0; }
+	#content .hinweis h3 { font-size: 110%; margin: 5px 0 10px 0; }
+	#content a { color: #666; text-decoration: none; border-bottom: 1px dotted #666; }
+	#content a:hover,
+	#content a:active, 
+	#content a:focus { color: #000; border-bottom: 1px solid #000; }
+	#content img.links { float: left; display: inline; margin: 0 7px 2px 0; }
+	#content img.rechts { float: right; display: inline; margin: 0 0 2px 7px; }
+	#content ul { margin: 0 0 10px 10px; }
+	#content ul li { padding: 0 0 0 10px; margin: 3px 0; background: url(images/dot.gif) no-repeat 0 7px; }
+	#content ul.downlink li,
+	#extra ul.downlink li,
+	#content ul li.downlink,
+	#extra ul li.downlink { padding: 0 0 0 18px; margin: 3px 0; background: url(images/dot_download.gif) no-repeat 0 3px; }
+	#extra ul li.downlink { padding: 3px 0 3px 18px; }
+	#content ul.externer_link li,
+	#extra ul.externer_link li,
+	#content ul li.externer_link,
+	#extra ul li.externer_link { padding: 0 0 0 18px; margin: 3px 0; background: url(images/externer_link.gif) no-repeat 0 3px; }
+	#extra ul li.externer_link { padding: 3px 0 3px 18px; }	
+	#content ul.weiterfuehrender_link li,
+	#content ul li.weiterfuehrender_link,
+	#content a.weiterfuehrender_link,
+	#extra ul.weiterfuehrender_link li,
+	#extra ul li.weiterfuehrender_link,
+	#extra a.weiterfuehrender_link { padding: 0 0 0 18px; margin: 3px 0; background: url(images/weiterfueh_link.gif) no-repeat 0 3px; }
+	#extra ul.weiterfuehrender_link li,
+	#extra ul li.weiterfuehrender_link,
+	#extra a.weiterfuehrender_link { padding: 3px 0 3px 18px; }
+	#content ul.listhinweis li,
+	#content ul li.listhinweis,
+	#extra ul.listhinweis li,
+	#extra ul li.listhinweis { padding: 0 0 0 18px; margin: 3px 0; background: url(images/dot_wichtig.gif) no-repeat 0 3px; }
+	#extra ul.listhinweis li,
+	#extra ul li.listhinweis { padding: 3px 0 3px 18px; }
+	#content ul.download li,
+	#content ul li.download { padding: 0; background: none; }
+	#extra ul li.matdat,
+	#content ul li.matdat { padding: 5px 0 5px 36px; background: transparent url(images/matdat_kl.gif) no-repeat center left; }
+	#extra ul li.matdat	{ padding: 8px 0 8px 36px; }
+	#content ul.mehr li { background: url(images/r1.gif) no-repeat 0 6px; padding: 0 0 0 18px; }
+	#content ul ul li { background: url(images/dot_2.gif) no-repeat 0 8px; }
+	#glossar #content ul li { background: none; padding: none; font-weight: bold; }
+	#glossar #content ul li a { background: url(images/rechtsblau.gif) no-repeat 0 4px; padding: 0 0 0 10px; margin: 0 0 0 -10px; border: none; }
+	#glossar-einzel h2 { display: none; }
+	.ie6 #glossar #content ul li a,
+	.ie7 #glossar #content ul li a { margin: 0; }	
+	#glossar #content ul ul li a { background: url(images/glossar.gif) no-repeat 0 0; padding: 0 0 0 15px; font-weight: normal; }
+	#content ol ul li { list-style-type: none; background: url(images/dot_2.gif) no-repeat 0 8px; }
+	#content ol { margin: 0 0 10px 30px; }
+	#content ol li { list-style: decimal; margin: 3px 0; }
+	#content ol.roemisch li { list-style-type: upper-roman }
+	#content p { margin: 0 0 10px 0;}
+	#content .ueberblick { background: #eee; padding: 10px; }
+
+	#content #faq h4 { cursor: pointer; padding: 0 0 0 10px; margin: 10px 0; background: url(images/h4_faq.gif) no-repeat 0 50%;}
+	#content #faq h4:hover,
+	#content #faq h4:active { color: #606060; }
+	
+	#content #list1 h3 { cursor: pointer; background: url(../cms/upload/css_img/add.png) no-repeat left 4px; padding: 2px 0 0 20px; }
+	#content #list1 h3.open { background: url(../cms/upload/css_img/cross.png) no-repeat left 4px; }
+	
+	#content ul.aktuell  { margin: 0 0 10px 0; }
+	#content ul.aktuell li { list-style: none; padding: 0; background-image: none; }
+	#content ul.aktuell li a { padding: 0 15px 0 0; background: url(images/r1.gif) no-repeat 100% 5px; }
+
+	#content .micronavigation { height: 21px; background: #fff; font-size: 0.89em; margin: 4px 0 10px 0; color: #000; padding-bottom: 5px; border-bottom: 1px solid #000; }
+	#content .micronavigation dl#breadcrumb { float: left; display: inline; }
+	#content .micronavigation dt { display: none; }
+	#content .micronavigation a { color: #000; background: #fff; text-decoration: none; border-bottom: none; }
+	#content .micronavigation a:hover { color: #9f9f9f; border-bottom: 1px solid #9f9f9f; }
+
+	.micronavigation form { float: right; display: inline; }
+
+	#content .faqblock { margin: 3px 0; padding: 0 5px 5px 5px; background: #eee; }
+    .kompass_b #player { float: left; margin: 0 10px 10px 0; }
+	
+	.num1, .num2 { font-size: 85%; line-height: 0; position: relative; vertical-align: baseline; top: -0.7em; padding: 0 0 0 2px; }
+	.num2 { top: -0.3em; padding: 0 5px 0 0; }
+	.num2:after { content: ")"; }
+	
+    /* phrasemarker */
+    .marked { background-color: #ffa; }
+    .markieren { cursor: url(/css/images/markieren.png), auto; } 
+
+
+/*///// Tabellen //////////////////////////////////////////////////////////////// */
+
+table { margin: 0 0 10px 0; border-color: #808080; border-width: 0 0 1px 1px; border-style: solid; border-collapse: collapse; width: 100%; }
+table.layout { border: none; width: auto; }
+	td, th { vertical-align: top; border-color: #808080; border-width: 1px 1px 0 0; border-style: solid; margin: 0; padding: 5px; background-color: #fff; }
+	table.layout td,
+	table.layout th { border: none; padding: 0; }
+	table.primar th { width: 33%; }
+	th { font-weight: bold; color: #333; background-color: #eee; }
+	table caption { font-size: 125%; font-weight: bold; padding: 20px 0 10px; }
+	table td.xxx,
+	table.profil td { text-align: center; }
+	
+	table.einfach { font-family: arial, helvetica, sans-serif; font-size: 1em; color: #000; background: #fff; border: 0.2em solid #949494; margin-bottom:1em; }
+	table.einfach caption { color: #666; font-family: arial, helvetica, sans-serif; font-size: 1.3em;font-weight: bold;
+		/* letter-spacing: 0.2em; */ padding: 0.5em; background: transparent;}
+	table.einfach thead th { text-align: left; padding: 1em 0.7em 1em 0.7em; font-family: arial, helvetica, sans-serif; font-size: 1.1em; font-weight: bold;}
+	table.einfach tbody td, tbody th { text-align: left; padding: 0.5em; }
+	table.einfach tbody tr { vertical-align: top; background: #eee; }
+	table.einfach tfoot td, tfoot th { text-align: left; padding: 0.5em 0.7em 0.5em 0.7em; font-family: arial, helvetica, sans-serif; font-size: 1.1em; font-weight: bold;}
+	table.einfach tbody a { font-weight: bold; text-decoration: none; color: #000;}
+	table.einfach tbody a:hover { text-decoration: underline; }
+	table.einfach tbody a:visited {	color: #474747; }
+	
+	.international { background: #9CF; }
+	.national { background: #AEB; }
+	.bundesland { background: #FDB;}
+
+
+/*///// Navigation //////////////////////////////////////////////////////////////// */
+
+#navigation { float: left; display: inline; width: 210px; margin-left: -100%; font-size: 0.95em; }
+	#navigation ul li { margin: 0; border-bottom: 1px solid #fff; background: url(images/blau.gif) 0 50%; }
+	#navigation ul li a,
+	#navigation ul li strong,
+	#navigation ul li b { display: block; padding: 4px 0 4px 17px; width: 193px; color: #000; font-weight: bold; text-decoration: none; }
+	#navigation ul li strong,
+	#navigation ul li b { background:#F60; color: #fff; border-left: 7px solid #900; padding: 4px 0 4px 10px; }
+	#navigation ul li a#id_431,
+	#navigation ul li a#id_123 { border-bottom: 5px solid #eff; } 
+	#navigation li a:hover,
+	#navigation li a:focus,
+	#navigation li a:active { color: #5583bd; }
+	#navigation li a.current { font-weight: bold; color: #5583bd; }
+	#navigation ul ul li { border-bottom: none; border-top: 1px solid #fff; background: url(images/blau_u.gif) 0 50%; }
+	#navigation ul ul li a { font-weight: normal; }
+	#navigation ul ul ul li { border-bottom: none; background-image: none; background-color: #eff; }
+	#navigation ul ul ul li a { width: 173px; padding: 2px 0 2px 30px; background: url(images/rechtsblau.gif) no-repeat 20px 50%; }
+	/* #navigation ul ul ul ul li a { width: 163px; padding: 2px 0 2px 40px; background: url(images/rechtsblau.gif) no-repeat 30px 50%; }	*/
+	#navigation ul ul ul ul li a { font-size: 0.85em; width: 163px; padding: 2px 0 2px 40px; background: url(images/rechtsblau.gif) no-repeat 30px 50%; }					
+
+	#navigation ul ul ul ul ul li { border-top: none;  }					
+	#navigation ul ul ul ul ul li a { width: 153px; padding: 2px 0 2px 50px; background: url(images/nav_dot.gif) no-repeat 40px 50%; font-size: 0.9em; }					
+				
+
+
+/*///// Extra ////////////////////////////////////////////////////////////////// */
+
+#extra { float: left; display: inline; font-size: .85em;  width: 183px; margin-left: -185px; background: #f9f8f4; border: 1px solid #5583bd; }
+	#extra h3 { background: #5583BD; color: #fff; font-weight: 600; font-size: 1.3em; line-height: 1.5em; padding: 0 0 0 10px; }
+	#extra p { color: #000; background: #f9f8f4; padding-bottom: 5px; margin: 5px 15px; }
+	#extra h4 { font-size: 1.2em; color: #000; margin: 5px 0 -5px 10px; }
+	#extra p.video { color: #000; background: #f9f8f4; padding-bottom: 5px; margin: 5px 0; }
+	#extra a { color: #666; background: #f9f8f4; text-decoration: none; }
+	#extra a:hover { color: #000; }
+	#extra img { margin: 10px 0 5px 10px; }
+	#extra .video img { margin: 10px 0 5px 0; }
+	#extra ul { padding: 5px 5px 5px 10px; }
+	#extra ul li  {  padding: 0 0 0 10px; margin: 3px 0; background: url(images/rechtsblau.gif) no-repeat 0 4px; }		
+	#extra form { padding: 5px 5px 5px 10px; }

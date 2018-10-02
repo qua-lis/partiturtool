@@ -1,0 +1,257 @@
+/* 
+  partitur.css
+  Parituren Stylesheet online
+
+  nach Vorlagen von
+  Carsten Peters, www.carsten-peters.net
+
+  // © Ministerium für Schule und Weiterbildung des Landes Nordrhein-Westfalen 
+
+  // ************************************************************
+  // Projektname: p = Partituren
+  // ************************************************************
+  
+  Eigene Ids und Klassen des Projekts sollten möglichst mit "p" beginnen, 
+  um Namensraum-Probleme zu vermeiden und projektbezogene Styles zu erkennen.
+  
+  lr: fh, 15-DEC-2011, Anpasung an p.
+  lr: fh, 20-DEC-2011.
+  lr: fh, 11-JAN-2012.
+  lr: fh, 27-MAR-2012, weitere Anpassungen nach Optimierung von Carsten Peters.
+  lr: cp, 24-APR-2012, Anpassungen Buttons, Tabelle
+  lr: cp, 15-OCT-2012, Anpassung Navi
+  lr: fh, 14-SEP-2013, input.pbutprint.
+
+  
+*/
+
+/* body
+---------------------------------------------------------------------------*/
+
+* { padding: 0; margin: 0; }
+body { background: #fff url(images/bg_inhalt.gif) repeat-y 220px 0; }
+#popup { font: 62.5% Arial, Helvetica, sans-serif; }
+
+/* paragraphs 
+---------------------------------------------------------------------------*/
+
+b, strong { font-weight: bold; }
+em, i, address { font-style: italic; }
+
+/* headlines 
+---------------------------------------------------------------------------*/
+
+h1 { font-size: 1.8em; }
+h2 { font-size: 1.6em; font-weight: bold; margin: 15px 0; padding: 10px 0 0 0; clear: both; }
+h3 { font-size: 1.3em; margin: 20px 0 5px 0; }
+	h3.n1,
+	h3.n2,
+	h3.n3 { padding: 4px 0 4px 30px; background-position: 0% 50%; background-repeat: no-repeat; }
+	table h3 { padding: 0 0 3px 8px; background: #eee; }
+h4 { font-size: 1.2em; margin: 20px 0 5px 0; color: #333; }
+h5 { font-size: 0.95em; margin: 10px 0 5px 0; color: #333; }
+h6 { font-size: 0.8em; margin: 5px 0 5px 0; color: #333; }
+
+	
+/* container 
+---------------------------------------------------------------------------*/
+
+#pcontainer { font-size: 1.2em; line-height: 1.6em; display: inline; float: left; width: 100%; }
+#popup #pcontainer { float: none; }
+#wrapper { display: inline; float: left; width: 100%; }
+#pinhalt { margin: 0 0 0 210px; padding: 10px; }
+#popup #pinhalt { margin: 0; padding: 10px 60px;  }
+.Plan #pinhalt,
+.Jahresplanung #pinhalt { margin: 0; padding: 0; }
+.Plan #navigation,
+.Jahresplanung #navigation { display: none; }
+#navigation { font-size: 1em; }
+
+/* kopf 
+---------------------------------------------------------------------------*/
+
+/*#pkopf { position: relative; height: 80px; text-align: left; background: #395c99; border-bottom: 5px solid #ececf2; }
+	#pkopf h1 { position: absolute; color: #fff; line-height: 80px; left: 16px; }
+	#pkopf .pstatus { position: absolute; top: 15px; left: 380px; font-size: .9em; line-height: 1.4em; color: #fff; }
+	#pkopf .plogo { position: absolute; top: 15px; left: 742px;  }
+*/	
+
+
+	
+/* content 
+---------------------------------------------------------------------------*/
+
+#pinhalt { float: left; display: inline; padding: 0 30px 0 10px; /*background: url(images/bg_inhalt_top2.gif) no-repeat top;*/ } /* width: 728px; margin: 0 0 0 210px; */
+/*#pstart #pinhalt { background: url(images/bg_inhalt_top.gif) no-repeat top; } */
+
+.ptoolbar a { 
+	margin: -2px 3px 0 0;
+	padding: 1px 3px 0 3px !important;
+	color: #333 !important;
+	display: block;
+	background: rgba(51, 51, 51, 0.2);
+	-webkit-box-shadow: inset 1px 1px 1px 1px rgba(51, 51, 51, 0.3); 
+	-moz-box-shadow: inset 1px 1px 1px 1px rgba(51, 51, 51, 0.3); 
+	box-shadow: inset 1px 1px 1px 1px rgba(51, 51, 51, 0.3); 
+	-webkit-border-radius: 3px; 
+	-moz-border-radius: 3px;
+	border-radius: 3px; 
+	}
+
+.ptoolbar a img { float: left; margin: 1px 2px 0 0; }
+
+.puvdelete,
+.puvremove {
+	cursor: pointer;
+}
+
+#p_suche { position: absolute; top: 113px; left: 920px; }
+#zurueck { position: absolute; top: 114px; left: 330px; }
+#bearbeitung { position: absolute; top: 114px; left: 500px; }
+#zurueck a,
+#bearbeitung a { color: #fff; font-weight: bold; }
+#auswahl { position: absolute; top: 158px; left: 350px; }
+
+/* formulare 
+---------------------------------------------------------------------------*/
+
+form { padding: 15px; margin: 10px 0; width: 100%; }
+	form .pschmal label { display: block; float: left; text-align: right; margin: 3px 3px 3px 0; width: 13em; }
+	form#frm_p_login input { display: block; float: left; margin: 3px 0; width: 250px; }
+	form br { clear: left; }
+	/* form input#psubmit { margin: 15px 0 0 0; } */
+	form .pinput { background: #fff; padding: 0 0 0 2px; border: 1px solid #ccc }
+	form .pbutton, button.pbutton, a.pbutton { float: none; background: #F60; width: auto; padding: 2px 5px; font-size: 1em; font-weight: bold; color: #fff; border: none; cursor: pointer; }
+	button.rechts  { float: right;}
+	form .pbutton:hover { color: #ececf2; }
+	form .pklein { width: 3em; }
+	form input[type=radio],form input[type=checkbox] {margin: 6px 0px 3px 3px;} /* oben,unten,rechts, links */
+	form input.pbutprint {margin-right:45px;}
+form.pkompakt {margin:0px;padding:0px;}	
+form.pkompakt select {font-size: 90%; font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;margin-bottom:3px;}	
+a.pbutton, a.pbutton:visited, a.pbutton:link,#stage a.pbutton:link {color:white; text-decoration:none;}
+
+/* #suche p#login { float: right; display: inline; margin: 0 18px 0 0; font-weight: bold; color: #fff } */
+p#pschule { float: right; display: inline; margin: 0px 100px 0px 0px; font-weight: bold; color: #fff; width: 600px; text-align:center; } 
+	
+/* footer 
+---------------------------------------------------------------------------*/
+
+#pfooter { clear: both; width: 728px; height: 60px; margin: 50px 0 0 220px; padding: 20px 0 0 0; 
+           font-size: .88em; text-align: center; color: #999; }
+#pfooter p { margin: 40px 10px; }
+
+
+/* UV-Anzeige- und Bearbeitungsbereich
+---------------------------------------------------------------------------*/
+
+
+/* Formatierungen z.T. vom Prototypen übernommen */
+#puvanzeige table td, th {
+  border: none;
+  padding: 5px; 
+  vertical-align:top;
+  text-align: left;
+}
+
+#puvanzeige th, .zentriert { text-align: center; }
+
+#puvanzeige .pzeilentitel { width: 200px; font-weight:bold; text-align: right; }
+
+#puvbearbeiten label {
+  color: #777777;
+  margin-right: 1em;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+  width: 23em;
+  text-align:left;
+  float:left;
+}
+
+
+/* textarea {font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif; font-size: 1em;} */
+#puvbearbeiten textarea,
+#puvbearbeiten input
+  {font-family: 'Courier New',courier, monospace; font-size: 1em;} 
+
+/* #puvbearbeiten form */
+fieldset {padding-left:5px;}
+#prahmen {padding:5px;}
+
+.pzeile1 {
+   background-color: #e2e2e2;  /* d9d9ff */
+}
+
+.pzeile1 {
+   background-color: #efefef;  /* dfdfff */
+}
+
+.pclose {width:640px;text-align:right;padding:0px;margin:0px;}
+
+.pfarbighervorgehoben {
+  color: blue; 		/* Farbige Texthervorhebung */
+}
+
+.pformatierungsoptionen {
+   font-size:90%;
+   color: #999999;
+}
+
+
+.pfliesstext {max-width:850px;}
+
+
+	
+	
+/* weitere */
+/* ------- */
+
+.pblocklinks,.pblockauswahl {float: left;}
+
+div.pblocklinks label { display: block; float: left; text-align: right; margin: 3px 3px 3px 0px; width: 10em; }
+div.pblockauswahl label {display: inline;float: left; text-align: right; margin: 0px 5px 0px 3px;}
+div.pblocklinks h3, .rechts { text-align: right;}
+
+.pclear {clear: both;}
+
+
+#pinhalt li { margin-left: 15px; padding-left: 8px; }
+
+#pkopf a { color: white; } /* Links im Kopfbereich */
+
+/* CID:fh120327:*/
+/* für draggable-Elemente*/
+.draggable { width: 90px; min-height: 90px; padding: 0.5em; float: left; margin: 0 10px 10px 0; }  
+
+/* .pdragmoving {height: 30px; min-height: 30px !important;} geht so nicht */
+
+/* Ablagespeicher für noch nicht plazierte Unterrichtseinheiten */
+#store .storeable{ height: 35px; min-height: 65px; overflow: hidden};
+#store {min-height: 120px;}
+ 
+
+
+.pplanneu a{
+color: white;
+text-decoration: none;
+font-weight: bold;
+}
+
+.pplanneu{
+	border: solid 1px #964c17;
+	border-left-width: 3px;
+	width:70px;
+	background-color: #DD915F;
+	color: white;
+	z-index:1;
+	padding: 5px;
+	line-height: 110%;
+	margin-left:30px;
+}
+ 
+/* Abstand bei den Auswahl-Optionen: */ 
+ul.padmwahl li {margin-bottom:12px;} 
+ul.padmwahl li ul li  {margin-bottom:6px;} 
+
+/* Treffer bei der Suche */
+.psuchtreffer {background-color:yellow !important;}

@@ -1,0 +1,39 @@
+/* ////// BP Stylesheet - ROT ///////////////////// */
+/* ////// Version vom 14.12.2006 /////////////////// */
+/* ////// von Carsten Peters /////////////////////// */
+
+/*///// Header ////////////////////////////////////////////////////////////////// */
+
+#header #topnavi { border-left-color:#a31200; color: #fff; background-color:#F60; }
+		#header #topnavi li a { color: #000; }
+		#header #topnavi a:hover { color: #808080; }
+
+
+/*///// Suche ////////////////////////////////////////////////////////////////// */
+		
+#suche { border-left-color: #a31200; background: #a31200; }	
+	#suche li { color: #fff; }
+	#suche a { color: #fff; }
+	#suche a:hover,
+	#suche a#current { color: #eee; }
+
+
+/*///// Navigation ////////////////////////////////////////////////////////////////// */
+
+	#navigation ul li { background-image: url(images/orange.gif); }
+	#navigation li a:hover,
+	#navigation li a:focus,
+	#navigation li a:active { color: #5583bd; }
+		#navigation ul ul li { background-image: url(images/orange_u.gif); }
+			#navigation ul ul ul li { background-color: #eff; }
+			#navigation ul ul ul li a,
+				#navigation ul ul ul ul li a { background-image: url(images/rechtsorange.gif); }					
+
+
+/*///// Extra ////////////////////////////////////////////////////////////////// */
+
+#extra { background: #f9f8f4; border-color: #5583bd; }
+	#extra h3 { background: #5583BD; color: #fff; }
+	#extra p { color: #000; background: #f9f8f4; }
+	#extra a { color: #9f9f9f; background: #f9f8f4; }
+	#extra ul li a { background-image: url(images/rechtsorange.gif); }

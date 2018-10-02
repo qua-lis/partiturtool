@@ -1,0 +1,23 @@
+/* 
+  partitur_print.css
+  Parituren Stylesheet online
+  Extra für die Druck-Ausgabe, um z.B. bestimmte Elemente im Druckbild auszublenden.
+
+  // © Ministerium für Schule und Weiterbildung des Landes Nordrhein-Westfalen 
+
+  // ************************************************************
+  // Projektname: p = Partituren
+  // ************************************************************
+  
+  Eigene Ids und Klassen des Projekts sollten möglichst mit "p" beginnen, 
+  um Namensraum-Probleme zu vermeiden und projektbezogene Styles zu erkennen.
+  
+  lr: fh, 14-SEP-2013.
+  
+*/
+
+/* Klasse, um nicht druckbare Elemente zu kennzeichnen: */
+.pnoprint {display:none;}
+
+/* Weitere: */
+input[type=button] {display:none;}

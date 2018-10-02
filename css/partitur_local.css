@@ -1,0 +1,500 @@
+/* CSS Partitur Drag+Drop
+zusammengeführt aus demo.css und partitur.css und Vorgaben
+
+*/
+
+/* Anpassung aus demo.css, dupliziert z20, 189  */
+
+div.demo {
+	padding:12px;
+	font-family: "Trebuchet MS", "Arial", "Helvetica", "Verdana", "sans-serif";
+	width:2600px;
+}
+
+div.demo h3.docs { clear:left; font-size:12px; font-weight:normal; padding:0 0 1em; margin:0; }
+
+div.demo-description {
+	clear:both;
+	padding:12px;
+	font-family: "Trebuchet MS", "Arial", "Helvetica", "Verdana", "sans-serif";
+	font-size: 1.3em;
+	line-height: 1.4em;
+}
+
+.left-nav .demos-nav {
+	padding-right: 10px;
+}
+
+.layout-grid {
+	width: 1600px;
+} /* width: 960px; CID:fh*/
+
+.ui-draggable, .ui-droppable {
+	background-position: top left;
+	height:220px;  
+	overflow:hidden;
+} /* CID:fh111221: feste Höhe eingestellt, und weitere Params */
+
+.notdraggable {
+	background-position: top left;
+	height:220px;  
+	overflow:hidden;}
+
+
+
+/* Anpassung Partitur-Demo, konsolidiert */
+
+/* Bereiche  */
+
+#stage{
+	background-image: url(../images/grid11.gif);
+	background-repeat: repeat;
+	float: left;
+	border: solid 1px gray;
+	z-index:2;
+}
+
+#store {
+-moz-box-shadow: inset 0 0 3px 3px #EEE6DE;
+-webkit-box-shadow: inset 0 0 3px 3px #EEE6DE;
+box-shadow: inset 0 0 3px 3px #EEE6DE;
+
+min-height: 120px;
+}
+
+div.pspeicher {
+min-height: 120px;
+margin-bottom:25px;
+margin-left:0px;
+border: solid 1px #C2BEBE;
+}	    
+
+.demo{
+	z-index:99;
+}
+
+.drag, .nodrag {height:220px;}
+
+.drag{position: relative;} /* wg containment-Fehler - Element verschwindet */
+
+.header span{
+	display: inline-block;
+	width:38px;  /* vorher 42, 38 erzeugt 40px-Raster */
+	text-align: center;
+	border: solid 1px #FF9800;
+}
+
+#stage .pplanedit {background-image: url(../images/grid2.gif);
+	    background-repeat: repeat;
+		}
+
+/* Zwischen-Header */
+#stage .pplanzkopf{
+margin-left: 41px;
+	width:300px;
+	height: 32px;
+	color: white;
+	text-indent: 6px;
+	background-image: url(../images/haken.gif);
+	z-index:99;
+}
+
+.pplanneu a{
+color: white;
+text-decoration: none;
+font-weight: bold;
+}
+
+.pplanneu{
+	border: solid 1px #964c17;
+	border-left-width: 3px;
+	width:55px;
+	background-color: #DD915F;
+	color: white;
+	z-index:1;
+	padding: 3px;
+	line-height: 110%;
+}
+
+.divider {
+	clear: left;
+	height: 2em;
+	background-color: white;
+}
+
+/* Anpassungen fh */
+/*  werden die verwendet? */
+
+/* 
+.drag li, .nodrag li {padding-left:3px;margin-left:10px;}
+*/
+
+.notdraggable li {margin-left: 15px}
+
+.nodrag .puvhead {margin:5px;} /* Kopfbereich im Nur-Lese-Modus auch mit Rand */	    
+
+
+/* .grenze {width:250px;} */
+
+
+
+
+/*  Elemente  */
+
+/* -Layout */
+#store .dragable{ 
+margin-top: 0px;
+margin-left: 0px;
+	height: 85px; 
+	min-height: 85px; 
+	width: 160px;
+	overflow: hidden; 
+	border: solid 1px #89919D;
+	float: left; 
+	margin: 0;
+}
+
+#store .storeable{ 
+margin-top: 8px;
+margin-left: 8px;
+	height: 55px; 
+	min-height: 55px; 
+	width: 200px;
+	overflow: hidden; 
+	border: solid 1px #89919D;
+}
+
+/* -Farben */
+
+.instore, .draggable{
+background-color: #F9F8F5 ; /* !important sonst gelten irgendwelche UI-Vorgaben */
+}
+.storeable, #stage .draggable{
+background-color:#F5F6F7;
+}
+
+/*  Header  */
+
+h3.puvhead{
+font-size:1em;
+margin:0;
+padding:2px;
+line-height:120%;
+color: #292929;
+min-height: 18px;
+}
+
+#store h3.puvhead {
+	background-image: url(../images/itemheadbrown.gif);
+	background-repeat: repeat;
+}
+
+#store .storeable h3.puvhead, #stage h3.puvhead{
+	background-image: url(../images/itemheadblue.gif);
+	background-repeat: repeat;
+}
+
+/* tool bar */
+#stage .puvtool, #store .puvtool {
+  background:#DADADA;
+  height: 18px;
+}
+
+img.puvremove{
+ float:right;
+ width:16px;
+ height:16px; 
+margin: 1px 3px 2px 2px;
+ }
+ 
+ img.puvedit{
+  float:right;
+  width:16px;
+ height:16px; 
+ margin: 1px 3px 2px 2px;
+ }
+
+.storeable img.puvremove,img.puvremove {
+  display:none; 
+} /* Remove-Bild im Ablagebereich ausblenden */
+
+.pplanedit img.puvremove {
+  display:block; 
+} /* Remove-Bild im nur in Edit-Zeile anzeigen */
+
+
+/*  Content  */
+
+.puvcontent{
+padding: 3px 2px 2px 2px;
+display: block;
+background-color: inherit;
+}
+
+.puvcontent ul{
+margin:0;
+padding: 0;
+list-style: square; 
+list-style-position:inside;
+list-style-image: none;
+}
+
+.puvcontent li{
+margin-left:8px;
+padding: 0;
+}
+
+/* Links */
+#stage a:link{
+color: #3A7CCC;
+font-weight: bold;
+  /* background:#DADADA;
+     display:block; */
+}	
+
+#stage a:active{
+color: black;
+}
+
+#stage a:hover{
+color: #A40F1D;
+}
+
+/* divers */
+li:hover{
+	xbackground-color:#FCF0C7;
+}
+
+/* ist das relevant? */
+.ui-state-default {
+    background-position: 1px 20px !important;
+	border: solid 1px #3D859D;
+}
+
+ul.sortable{
+	border-top: solid 1px gray;
+	border-bottom: solid 1px gray;	
+	float: left;
+	display: block;
+	width: 100%;
+}
+
+#klickmich{
+	border: solid 1px red;
+	font-size: 2em;
+	padding: 3px;
+	color: orange;
+	margin: 5px;
+}
+
+
+
+/* drag-drop
+---------------------------------------------------------------------------*/
+
+
+
+#x-store div{
+
+background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* IE10+ */
+background: linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}
+
+
+
+
+
+
+
+
+
+
+/* 
+  partitur.css
+  Parituren Stylesheet online
+
+  nach Vorlagen von
+  Carsten Peters, www.carsten-peters.net
+
+  // © Ministerium für Schule und Weiterbildung des Landes Nordrhein-Westfalen 
+
+  // ************************************************************
+  // Projektname: p = Partituren
+  // ************************************************************
+  
+  Eigene Ids und Klassen des Projekts sollten möglichst mit "p" beginnen, 
+  um Namensraum-Probleme zu vermeiden und projektbezogene Styles zu erkennen.
+  
+  lr: fh, 15-DEC-2011, Anpasung an p.
+  lr: fh, 20-DEC-2011.
+  lr: fh, 11-JAN-2012.
+  
+*/
+
+/* body
+---------------------------------------------------------------------------*/
+
+* { padding: 0; margin: 0; }
+body { font-size: 62.5%; font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif; 
+       color: #333; background: #fff url(images/bg_inhalt.gif) repeat-y 220px 0; }
+
+
+/* paragraphs 
+---------------------------------------------------------------------------*/
+
+b, strong { font-weight: bold; }
+em, i, address { font-style: italic; }
+
+/* headlines 
+---------------------------------------------------------------------------*/
+
+h1 { font-size: 1.8em; }
+h2 { font-size: 1.6em; font-weight: bold; margin: 15px 0; padding: 10px 0 0 0; clear: both; }
+h3 { font-size: 1.3em; margin: 20px 0 5px 0; }
+	h3.n1,
+	h3.n2,
+	h3.n3 { padding: 4px 0 4px 30px; background-position: 0% 50%; background-repeat: no-repeat; }
+	table h3 { padding: 0 0 3px 8px; background: #eee; }
+h4 { font-size: 1.2em; margin: 20px 0 5px 0; color: #333; }
+h5 { font-size: 0.95em; margin: 10px 0 5px 0; color: #333; }
+h6 { font-size: 0.8em; margin: 5px 0 5px 0; color: #333; }
+
+	
+/* container 
+---------------------------------------------------------------------------*/
+
+#pcontainer { font-size: 1.2em; line-height: 1.6em; }
+
+
+/* kopf 
+---------------------------------------------------------------------------*/
+
+#pkopf { height: 80px; text-align: left; background: #395c99; border-bottom: 5px solid #ececf2; }
+	#pkopf h1 { position: absolute; color: #fff; line-height: 80px; left: 16px; }
+	#pkopf .pstatus { position: absolute; top: 15px; left: 380px; font-size: .9em; line-height: 1.4em; color: #fff; }
+	#pkopf .plogo { position: absolute; top: 15px; left: 742px;  }
+
+		
+/* content 
+---------------------------------------------------------------------------*/
+
+#pinhalt { float: left; display: inline; margin-left:60px; margin-top:20px; 
+           background: url(images/bg_inhalt_top2.gif) no-repeat top; } /* width: 728px; margin: 0 0 0 210px; */
+#pstart #pinhalt { background: url(images/bg_inhalt_top.gif) no-repeat top; }
+
+
+
+/* formulare 
+---------------------------------------------------------------------------*/
+
+form { padding: 15px; margin: 10px 0; width: 100%; }
+	form .pschmal label { display: block; float: left; text-align: right; margin: 3px 3px 3px 0; width: 13em; }
+	form#frm_p_login input { display: block; float: left; margin: 3px 0; width: 250px; }
+	form br { clear: left; }
+	/* form input#psubmit { margin: 15px 0 0 0; } */
+	form .pinput { background: #fff; padding: 0 0 0 2px; border: 1px solid #ccc }
+	form .pbutton { float: none; background: #395c99; width: auto; padding: 2px 5px; font-size: 1em; font-weight: bold; color: #fff; border: none; cursor: pointer; }
+	form .pbutton:hover { color: #ececf2; }
+	form .pklein { width: 3em; }
+	form input[type=radio],form input[type=checkbox] {margin: 6px 0px 3px 3px;} /* oben,unten,rechts, links */
+	
+	
+/* footer 
+---------------------------------------------------------------------------*/
+
+#pfooter { clear: both; width: 728px; height: 60px; margin: 50px 0 0 220px; padding: 20px 0 0 0; 
+           font-size: .88em; text-align: center; color: #999; }
+#pfooter p { margin: 40px 10px; }
+
+
+/* UV-Anzeige- und Bearbeitungsbereich
+---------------------------------------------------------------------------*/
+/* Formatierungen z.T. vom Prototypen übernommen */
+#puvanzeige table td, th {
+  border-spacing: 2px;
+  border-style: dotted;
+  border-width: 1px;
+  border-color: #9090e0;   /*Linienfarbe: 9090e0*/
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px; 
+  padding-left: 5px; 
+  vertical-align:top;
+  text-align: left;
+  vertical-align:top;
+}
+
+#puvanzeige th {text-align:center;}
+
+#puvanzeige .pzeilentitel {font-weight:bold;}
+
+
+#puvbearbeiten label {
+  color: #777777;
+  margin-right: 1em;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+  width: 23em;
+  text-align:left;
+  float:left;
+}
+
+
+/* textarea {font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif; font-size: 1em;} */
+#puvbearbeiten textarea,
+#puvbearbeiten input
+  {font-family: 'Courier New',courier, monospace; font-size: 1em;} 
+
+/* #puvbearbeiten form */
+fieldset {padding-left:5px;}
+#prahmen {padding:5px;}
+
+.pzeile1 {
+   background-color: #e2e2e2;  /* d9d9ff */
+}
+
+.pzeile1 {
+   background-color: #efefef;  /* dfdfff */
+}
+
+.pclose {width:640px;text-align:right;padding:0px;margin:0px;}
+
+.pfarbighervorgehoben {
+  color: blue; 		/* Farbige Texthervorhebung */
+}
+
+.pformatierungsoptionen {
+   font-size:90%;
+   color: #999999;
+}
+
+
+.pfliesstext {max-width:800px;}
+
+
+	
+	
+/* weitere */
+/* ------- */
+
+.pblocklinks,.pblockauswahl {float: left;}
+
+div.pblocklinks label { display: block; float: left; text-align: right; margin: 3px 3px 3px 0px; width: 10em; }
+div.pblockauswahl label {display: inline;float: left; text-align: right; margin: 0px 5px 0px 3px;}
+div.pblocklinks h3 { text-align: right;}
+
+.pclear {clear: both;}
+
+
+li {margin-left:15px; padding-left:8px;}
+
+#pkopf a {color:white;} /* Links im Kopfbereich */
+
+
+
+

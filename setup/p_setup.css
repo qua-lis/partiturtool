@@ -1,0 +1,19 @@
+/* p_setup.css 				*/
+/* CSS für Setup 			*/
+/*				        */ 
+/* fh, 25-NOV-2013                      */
+
+body {
+	font-family: "Helvetica", "Arial", "Verdana", "sans-serif";
+}
+
+input,select,textarea{ font-family: "Courier New", "Courier"; }
+
+h1 { font-size: 1.8em; }
+h2 { font-size: 1.6em; font-weight: bold; margin: 15px 0; padding: 10px 0 0 0; clear: both; }
+h3 { font-size: 1.3em; margin: 20px 0 5px 0; }
+
+
+/* Klassen */
+
+.hinweis {color: red;}

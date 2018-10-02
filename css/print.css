@@ -1,0 +1,28 @@
+/* Print-Style */
+
+.none,
+.no_print,
+#skip1,
+#skip2,
+#suche,
+#login,
+#hilfsmenu,
+.unsichtbar,
+.navi,
+#oben,
+#left,
+#breadcrumb { display: none; }
+
+a img { border: none; }
+
+.kennung { float: right; }
+
+#header h1,
+#header h1 a, 
+#header h1 a:link, 
+#header h1 a:visited, 
+#header h1 a:hover { color: #000; text-decoration: none; }
+
+table, th, td { padding: 4px; border: 1px solid #ddd; border-collapse: collapse; }
+th { text-align: left; }
+.referenz td { text-align: center; }

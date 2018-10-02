@@ -1,0 +1,39 @@
+/* ////// BP Stylesheet - BLAU ///////////////////// */
+/* ////// Version vom 01.09.2007 /////////////////// */
+/* ////// von Carsten Peters /////////////////////// */
+
+/*///// Header ////////////////////////////////////////////////////////////////// */
+
+#header #topnavi { border-left-color: #5583BD; color: #fff; background-color: #4EA7D3; }
+	#header #topnavi h1 { color: #fff; }
+	#header #topnavi a { color: #000; }
+	#header #topnavi a:hover { color: #808080; }
+	#header #topnavi p img { border-color: #e8e8e8; }
+
+
+/*///// Suche ////////////////////////////////////////////////////////////////// */
+		
+#suche { border-left-color: #3F6AA0; background: #5583BD; }	
+	#suche li { color: #fff; }
+	#suche a { color: #fff; }
+	#suche a:hover,
+	#suche a#current { color: #eee; }
+
+
+/*///// Navigation ////////////////////////////////////////////////////////////////// */
+
+	#navigation ul li { background-image: url(images/blau.gif); }
+	#navigation li a:hover,
+	#navigation li a:focus,
+	#navigation li a:active { color: #5583bd; }
+		#navigation ul ul li { background-image: url(images/blau_u.gif); }
+			#navigation ul ul ul li { background-color: #eff; }
+			#navigation ul ul ul li a,
+				#navigation ul ul ul ul li a { background-image: url(images/rechtsblau.gif); }					
+
+
+/*///// Extra ////////////////////////////////////////////////////////////////// */
+
+#extra { background: #f9f8f4; border-color: #5583bd; }
+	#extra h3 { background: #5583BD; color: #fff; }
+	#extra ul li { background-image: url(images/rechtsblau.gif); }
